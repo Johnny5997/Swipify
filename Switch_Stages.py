@@ -144,8 +144,8 @@ class StageManagerMenuBar(rumps.App):
         self.startup_item.state = self.is_startup_enabled()
 
         # Icon selection submenu
-        self.icon_menu1 = rumps.MenuItem("Icon 1", callback=self.set_icon1)
-        self.icon_menu2 = rumps.MenuItem("Icon 2", callback=self.set_icon2)
+        self.icon_menu1 = rumps.MenuItem("White", callback=self.set_icon1)
+        self.icon_menu2 = rumps.MenuItem("Black", callback=self.set_icon2)
         self.update_icon_checkmarks()
 
         self.menu = [
@@ -154,6 +154,8 @@ class StageManagerMenuBar(rumps.App):
             self.startup_item,
             rumps.separator,
             ["Menu Bar Icon", [self.icon_menu1, self.icon_menu2]],
+            rumps.separator,
+            rumps.MenuItem("Help", callback=self.show_help),
             rumps.separator,
             rumps.MenuItem("Quit", callback=self.quit_app)
         ]
@@ -169,6 +171,10 @@ class StageManagerMenuBar(rumps.App):
         else:
             self.enable_startup()
             sender.state = True
+
+    def show_help(self, _):
+        """Show the permissions help dialog"""
+        self.controller.show_permissions_reminder()
 
     def load_icon_preference(self):
         """Load saved icon preference, default to menu.png"""

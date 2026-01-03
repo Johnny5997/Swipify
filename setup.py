@@ -4,6 +4,7 @@ APP = ['Switch_Stages.py']
 DATA_FILES = []
 OPTIONS = {
     'argv_emulation': False,
+    'iconfile': 'icon.icns',
     'packages': ['rumps', 'pynput'],
     'includes': [
         'pynput.mouse',
@@ -18,17 +19,17 @@ OPTIONS = {
     'excludes': ['tkinter', 'matplotlib', 'numpy'],
     'site_packages': True,
     'plist': {
-        'CFBundleName': 'Switch Stages',
-        'CFBundleDisplayName': 'Switch Stages',
-        'CFBundleGetInfoString': "Switch Stages App",
-        'CFBundleIdentifier': "com.stagemanager.controller",
-        'CFBundleVersion': "1.0.0",
-        'CFBundleShortVersionString': "1.0.0",
-        'NSHumanReadableCopyright': "Copyright © 2026, Your Name, All Rights Reserved",
+        'CFBundleName': 'Swipify',
+        'CFBundleDisplayName': 'Swipify',
+        'CFBundleGetInfoString': "Swipify",
+        'CFBundleIdentifier': "com.jngames.swipify",
+        'CFBundleVersion': "1.0",
+        'CFBundleShortVersionString': "1.0",
+        'NSHumanReadableCopyright': "Copyright © 2026, JN Games (Crystal Software), All Rights Reserved.",
         'LSUIElement': True,
         'LSBackgroundOnly': False,
-        'NSAppleEventsUsageDescription': 'Switch Stages needs to send keyboard commands to control Stage Manager.',
-        'NSAccessibilityUsageDescription': 'Switch Stages needs Input Monitoring permission to detect middle mouse button gestures.',
+        'NSAppleEventsUsageDescription': 'Swipify needs to send keyboard commands to control Stage Manager.',
+        'NSAccessibilityUsageDescription': 'Swipify needs Input Monitoring permission to detect middle mouse button gestures.',
     }
 }
 
